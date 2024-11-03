@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>1 - Instrukcja warunkowa w JavaScript</title>
+	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<label>
+		Podaj numer dnia tygodnia: <input type="number" id="number">
+	</label>
+	
+	<input type="submit" value="Zobacz nazwę dnia" onclick="getDayName()">
+
+	<div id="wynik"></div>
+	
+	<script>
+	
+		function getDayName()
+		{
+
+            var number = parseInt(document.getElementById("number").value);
+
+			if(number == 1){
+                wynik.style.color = "black";
+                document.getElementById("wynik").innerText = "Pierwszy dzień tygodnia to Monday - poniedziałek";
+            }else if(number == 2){
+                wynik.style.color = "black";
+                document.getElementById("wynik").innerText = "Drugi dzień tygodnia to Tuesday - wtorek";
+            }else if(number == 3){
+                wynik.style.color = "black";
+                document.getElementById("wynik").innerText = "Trzeci dzień tygodnia to Wednesday - środa";
+            }else if(number == 4){
+                wynik.style.color = "black";
+                document.getElementById("wynik").innerText = "Czwarty dzień tygodnia to Thursday - czwartek";
+            }else if(number ==5){
+                wynik.style.color = "yellow";
+                document.getElementById("wynik").innerText = "Piąty dzień tygodnia to Friday - piątek, piąteczek, piątunio";
+            }else if(number == 6){
+                wynik.style.color = "green";
+                document.getElementById("wynik").innerText = "Szósty dzień tygodnia to Saturday - sobota";
+            }else if(number == 7){
+                wynik.style.color = "green";
+                document.getElementById("wynik").innerText = "Pierwszy dzień tygodnia to Sunday - niedziela"; //idk czy to celowo, aby sprawdzic czy czytamy polecenia czy pomyłka z tym "Pierwszy" c:
+            }else{
+                wynik.style.color = "red";
+                document.getElementById("wynik").innerText = "To nie jest prawidłowy numer tygodnia!";
+            }
+			
+		}
+
+	</script>
+
+</body>
+</html>

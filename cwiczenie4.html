@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>4 - Instrukcja warunkowa w JavaScript</title>
+	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<label> a = <input type="number" id="a"> </label>
+	<label> b = <input type="number" id="b"> </label>
+	<label> c = <input type="number" id="c"> </label>
+
+	<input type="submit" value="Informacje o liczbach" onclick="matematyka()">
+
+	<div id="wynik">
+		<p id="lowest"></p>
+		<p id="highest"></p>
+		<p id="bezwzgledna"></p>
+		<p id="parzysta"></p>
+		
+	</div>
+
+	
+	<script>
+	
+			
+
+		function matematyka()
+		{
+			var a = document.getElementById('a').value;
+			var b = document.getElementById('b').value;
+			var c = document.getElementById('c').value;
+
+			var low = document.getElementById("lowest");
+			var high = document.getElementById("highest");
+			var bez = document.getElementById("bezwzgledna");
+			var parz = document.getElementById("parzysta");
+
+			low.innerText = lowest(a,b,c);
+            high.innerText = highest(a,b,c);
+			bez.innerText = `Wartość bezwzględna z a: ${bezwzgledna(a)} \n Wartość bezwzględna z b: ${bezwzgledna(b)} \n Wartość bezwzględna z c: ${bezwzgledna(c)}`;
+			parz.innerText = `${parzysta(a)} \n ${parzysta(b)} \n ${parzysta(c)}`;
+		}
+
+		
+		function lowest(a, b, c){
+            var l;
+            if(a<b){
+                if(a<c) l = a;
+                else l = c;
+            }
+            else{
+                if(b<c) l = b;
+                else l = c
+            }
+            return "Najmniejsza liczba to: "+l;
+        }
+
+		function highest(a, b, c){
+            var h;
+            if(a>b){
+                if(a>c) h = a;
+                else h = c;
+            }
+            else{
+                if(b>c) h = b;
+                else h = c
+            }
+            return "Największa liczba to: "+h;
+        }
+
+
+		function bezwzgledna(w){
+			if(w<0){
+				return -w;
+			}else{
+				return w;
+			}
+		}
+
+		function parzysta(p){
+			if(p%2 == 0){
+				return "liczba " + p + " jest parzysta";
+			}else{
+				return "liczba " + p + " jest nieparzysta";
+			}
+		}
+
+	
+			
+	
+
+
+
+	</script>
+
+</body>
+</html>
