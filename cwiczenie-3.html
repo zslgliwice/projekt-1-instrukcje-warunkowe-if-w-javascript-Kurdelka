@@ -21,7 +21,26 @@
 	
 		function ktora_cwiartka()
 		{
-			
+			var x = parseInt(document.getElementById("x").value);
+            var y = parseInt(document.getElementById("y").value);
+
+            const k = "Kartezjusz (Rene Descartes) żył w latach 1596 - 1650. Pochodził z drobnej szlachty, jego ojciec był prawnikiem i parlamentarzystą w Bretanii. Kartezjusz był półsierotą - jego matka zmarła przy porodzie. W ósmym roku życia Kartezjusz trafił do znakomitej szkoły w La Fleche. Była to elitarna szkoła, prowadzona przez jezuitów. Po ukończeniu edukacji przez krótki czas przebywał w Paryżu, a gdy wybuchła wojna trzydziestoletnia (1618), zaciągnął się do wojska. Po powrocie z kampanii czeskiej osiadł w Holandii, kilkakrotnie zmieniając miejsce zamieszkania - dzieła, które publikował, wywoływały niekiedy ostre protesty teologów, a nawet pozwy sądowe. Kartezjusz, choć miał wielu przyjaciół wśród uczonych i arystokracji, wiódł samotny tryb życia. W 1649 roku przybył do Szwecji na zaproszenie królowej Krystyny. Miał zostać jej nauczycielem, ale nie wytrzymał północnego klimatu, zachorował na zapalenie płuc i zmarł. Kartezjusz uznawany jest za ojca racjonalizmu, a także - obok F. Bacona - za ojca filozofii nowożytnej. Chociaż za sprawą swego wykształcenia związany był z filozofią scholastyczną, to właśnie jego filozofia w znacznym stopniu z tą tradycją zrywała. Objawiało się to w odrzuceniu zastanych znaczeń wielu terminów filozoficznych i poszukiwaniu nowych, własnych definicji wielu kluczowych pojęć z pogranicza filozofii i teologii. Kartezjusz nie darzył szczególnym szacunkiem ani pism Arystotelesa, ani świętych. Jego dążenie do stworzenia własnej metody i systemu filozoficznego stworzyło w efekcie pewną nową jakość filozofowania - z jednej strony poprzez pogardliwy lub ambiwalentny stosunek do tradycji, z drugiej zaś - przez stworzenie modelu filozofii pozbawionej barwnego wizjonerstwa i fantazji, które często towarzyszyły błyskotliwym postaciom renesansu. Przede wszystkim jednak zapoczątkowuje Kartezjusz bardzo ważny trop w opisie człowieka - podjęty i rozwijany właściwie aż do XVIII wieku. Człowiek u Kartezjusza najpełniej realizuje się filozofując, ale sama filozofia oznaczała dla Kartezjusza tylko najogólniejszą naukę, na kształt drzewa, którego pniem jest metafizyka, a gałęźmi - mechanika, medycyna, etyka. To początek drogi, podczas której istota rozumna wyposażona zostanie we wszystkie narzędzia pozwalające - poprzez naukę - opanować świat. Kartezjusz udokumentował możliwości ludzkiego rozumu, przyznając człowiekowi zdolność do samodzielnego rozpoznawania prawdy. Jego filozofia poruszyła dwa problemy, które w dużym stopniu wyznaczyły pole zainteresowań innych myślicieli wieku XVII: problem człowieka i jego wolności, oraz problem substancji."
+
+            if(x==15 && y==96){
+                document.getElementById("wynik").innerText = k;
+            }else if(x>0 && y>0){
+                document.getElementById("wynik").innerText = "Punkt P znajduje się w I ćwiartce";
+            }else if(x<0 && y<0){
+                document.getElementById("wynik").innerText = "Punkt P znajduje się w III ćwiartce";
+            }else if(x>0 && y<0){
+                document.getElementById("wynik").innerText = "Punkt P znajduje się w IV ćwiartce";
+            }else if(x<0 && y>0){
+                document.getElementById("wynik").innerText = "Punkt P znajduje się w II ćwiartce"; 
+            }else if(x==0 && y==0){
+                document.getElementById("wynik").innerText = "Punkt P=(0,0) jest początkiem układu współrzędnych";
+            }else if(x==0 || y==0){
+                document.getElementById("wynik").innerText = "Punkt P znajduje się na jednej z osi układu";
+            }
 			
 		}
 
